@@ -14,6 +14,10 @@
 		5FBB503D1AFD1FD900EF4189 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB503C1AFD1FD900EF4189 /* Images.xcassets */; };
 		5FBB50401AFD1FD900EF4189 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB503E1AFD1FD900EF4189 /* LaunchScreen.xib */; };
 		5FBB504C1AFD1FDA00EF4189 /* KYParallaxViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB504B1AFD1FDA00EF4189 /* KYParallaxViewDemoTests.m */; };
+		5FBB50571AFD224D00EF4189 /* KYParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB50561AFD224D00EF4189 /* KYParallaxView.m */; };
+		5FDAC8151AFD441000B97F9C /* bkgImg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FDAC8141AFD441000B97F9C /* bkgImg@2x.jpg */; };
+		5FDAC8171AFD5B2900B97F9C /* CustomViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FDAC8161AFD5B2900B97F9C /* CustomViews.xib */; };
+		5FDAC81A1AFD5C5300B97F9C /* CustomViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAC8191AFD5C5300B97F9C /* CustomViews.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,12 @@
 		5FBB50451AFD1FDA00EF4189 /* KYParallaxViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KYParallaxViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBB504A1AFD1FDA00EF4189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FBB504B1AFD1FDA00EF4189 /* KYParallaxViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYParallaxViewDemoTests.m; sourceTree = "<group>"; };
+		5FBB50551AFD224D00EF4189 /* KYParallaxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KYParallaxView.h; path = KYParallaxTableView/KYParallaxView.h; sourceTree = "<group>"; };
+		5FBB50561AFD224D00EF4189 /* KYParallaxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KYParallaxView.m; path = KYParallaxTableView/KYParallaxView.m; sourceTree = "<group>"; };
+		5FDAC8141AFD441000B97F9C /* bkgImg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bkgImg@2x.jpg"; sourceTree = "<group>"; };
+		5FDAC8161AFD5B2900B97F9C /* CustomViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomViews.xib; path = KYParallaxTableView/CustomViews.xib; sourceTree = "<group>"; };
+		5FDAC8181AFD5C5300B97F9C /* CustomViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomViews.h; path = KYParallaxTableView/CustomViews.h; sourceTree = "<group>"; };
+		5FDAC8191AFD5C5300B97F9C /* CustomViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomViews.m; path = KYParallaxTableView/CustomViews.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,7 @@
 				5FBB50341AFD1FD900EF4189 /* AppDelegate.m */,
 				5FBB50361AFD1FD900EF4189 /* ViewController.h */,
 				5FBB50371AFD1FD900EF4189 /* ViewController.m */,
+				5FBB50581AFD229700EF4189 /* KYParallaxTableView */,
 				5FBB50391AFD1FD900EF4189 /* Main.storyboard */,
 				5FBB503C1AFD1FD900EF4189 /* Images.xcassets */,
 				5FBB503E1AFD1FD900EF4189 /* LaunchScreen.xib */,
@@ -117,6 +128,19 @@
 				5FBB504A1AFD1FDA00EF4189 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FBB50581AFD229700EF4189 /* KYParallaxTableView */ = {
+			isa = PBXGroup;
+			children = (
+				5FDAC8161AFD5B2900B97F9C /* CustomViews.xib */,
+				5FDAC8181AFD5C5300B97F9C /* CustomViews.h */,
+				5FDAC8191AFD5C5300B97F9C /* CustomViews.m */,
+				5FBB50551AFD224D00EF4189 /* KYParallaxView.h */,
+				5FBB50561AFD224D00EF4189 /* KYParallaxView.m */,
+				5FDAC8141AFD441000B97F9C /* bkgImg@2x.jpg */,
+			);
+			name = KYParallaxTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +224,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FBB503B1AFD1FD900EF4189 /* Main.storyboard in Resources */,
+				5FDAC8171AFD5B2900B97F9C /* CustomViews.xib in Resources */,
 				5FBB50401AFD1FD900EF4189 /* LaunchScreen.xib in Resources */,
+				5FDAC8151AFD441000B97F9C /* bkgImg@2x.jpg in Resources */,
 				5FBB503D1AFD1FD900EF4189 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FBB50571AFD224D00EF4189 /* KYParallaxView.m in Sources */,
 				5FBB50381AFD1FD900EF4189 /* ViewController.m in Sources */,
 				5FBB50351AFD1FD900EF4189 /* AppDelegate.m in Sources */,
 				5FBB50321AFD1FD900EF4189 /* main.m in Sources */,
+				5FDAC81A1AFD5C5300B97F9C /* CustomViews.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +375,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xinyu Li (XWYND9KE57)";
 				INFOPLIST_FILE = KYParallaxViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KYParallaxViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +447,7 @@
 				5FBB50511AFD1FDA00EF4189 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5FBB50521AFD1FDA00EF4189 /* Build configuration list for PBXNativeTarget "KYParallaxViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +456,7 @@
 				5FBB50541AFD1FDA00EF4189 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

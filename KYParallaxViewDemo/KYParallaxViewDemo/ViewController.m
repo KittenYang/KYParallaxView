@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "KYParallaxView.h"
 
 @interface ViewController ()
+
+@property(nonatomic,strong)KYParallaxView *parallaxView;
 
 @end
 
@@ -16,12 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.parallaxView= [[KYParallaxView alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:self.parallaxView];
+    self.parallaxView.bkgImageView.image = [UIImage imageNamed:@"bkgImg@2x.jpg"];
+
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
