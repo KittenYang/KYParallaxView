@@ -1,5 +1,5 @@
 //
-//  KYParallaxView.m
+//  KYParallaxVerticalView .m
 //  KYParallaxViewDemo
 //
 //  Created by Kitten Yang on 5/9/15.
@@ -15,18 +15,17 @@
 #define DEFAULT_BLUR_DELTA_FACTOR 1.4
 
 
-#import "KYParallaxView.h"
+#import "KYParallaxVerticalView.h"
 #import "CustomViews.h"
-#import "UIImage+ImageEffects.h"
 #import <Accelerate/Accelerate.h>
 
-@interface KYParallaxView()<UIScrollViewDelegate>
+@interface KYParallaxVerticalView()<UIScrollViewDelegate>
 
 @property (nonatomic,strong)UIImageView *bkgImageView;
 
 @end
 
-@implementation KYParallaxView{
+@implementation KYParallaxVerticalView{
     CGRect oldframe;
 }
 

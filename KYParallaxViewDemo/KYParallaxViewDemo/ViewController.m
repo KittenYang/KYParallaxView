@@ -7,23 +7,63 @@
 //
 
 #import "ViewController.h"
-#import "KYParallaxView.h"
+#import "KYParallaxVerticalView.h"
+#import "KYParallaxHorizontalView.h"
+#import "KYParallaxCollectionLayout.h"
 
-@interface ViewController ()
+@interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
-@property(nonatomic,strong)KYParallaxView *parallaxView;
+@property(nonatomic,strong)KYParallaxVerticalView *parallaxVerticalView;
+@property(nonatomic,strong)KYParallaxHorizontalView *parallaxHorizontalView;
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    NSMutableArray *colors;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //如果只是需要加单页效果
+    /*
     self.parallaxView= [[KYParallaxView alloc]initWithFrame:self.view.frame];
     [self.view addSubview:self.parallaxView];
     [self.parallaxView bkgImageViewSetImage: [UIImage imageNamed:@"bkgImg@2x.jpg"]];
+     */
+    
+    //如果是要加视差滚动的collectionView
+    self.parallaxHorizontalView = [[KYParallaxHorizontalView alloc]initWithFrame:self.view.frame andCollectionDelegate:self];
+    [self.view addSubview:self.parallaxHorizontalView];
+    
+    colors = [NSMutableArray arrayWithObjects:[UIColor redColor],[UIColor yellowColor],[UIColor blueColor],[UIColor orangeColor],[UIColor greenColor] ,nil];
 
 }
+
+
+
+#pragma mark -- UICollectionViewDelegate
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
+    return 5;
+    
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
+    cell.backgroundColor  = colors[indexPath.item];
+    KYParallaxVerticalView * verticalView = [[KYParallaxVerticalView alloc]initWithFrame:CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height)];
+    [verticalView bkgImageViewSetImage: [UIImage imageNamed:@"bkgImg@2x.jpg"]];
+    [cell addSubview:verticalView];
+    return cell;
+    
+}
+
+#pragma mark -- UITableViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [self.parallaxHorizontalView parallax:scrollView];
+}
+
 
 
 - (void)didReceiveMemoryWarning {

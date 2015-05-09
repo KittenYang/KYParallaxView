@@ -1,5 +1,5 @@
 //
-//  KYParallaxTableView.h
+//  KYParallaxVerticalView .h
 //  KYParallaxViewDemo
 //
 //  Created by Kitten Yang on 5/9/15.
@@ -10,7 +10,7 @@
 
 
 
-@interface KYParallaxView : UIView
+@interface KYParallaxVerticalView : UIView
 
 @property (nonatomic,strong)UIScrollView *scroller;
 @property (nonatomic,strong)NSString *CellReuseIdentifier;
