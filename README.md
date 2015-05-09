@@ -25,7 +25,9 @@
 
 ##如何自定义单页垂直滚动视图？
 
-进入`CustomViews.h`,你会发现有三个文件![](customView.png)
+进入`CustomViews.h`,你会发现有三个文件
+
+![](customView.png)
 
 你会发现CustomViewXib是这样的：
 
