@@ -41,7 +41,6 @@
     UIScrollView *bkgScrollView = [[UIScrollView alloc]initWithFrame:frame];
     oldframe = bkgScrollView.frame;
     bkgScrollView.tag = TAG_BKGSCROLLVIEW;
-    bkgScrollView.backgroundColor = [UIColor blueColor];
     bkgScrollView.delegate = self;
     bkgScrollView.minimumZoomScale = 1.0f;
     bkgScrollView.maximumZoomScale = 2.0f;
@@ -49,7 +48,7 @@
     
     //添加背景视图
     self.bkgImageView = [[UIImageView alloc]initWithFrame:bkgScrollView.frame];
-    self.bkgImageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.bkgImageView.contentMode = UIViewContentModeCenter;
     [bkgScrollView addSubview:self.bkgImageView];
     
     //添加显现内容的滚动视图
@@ -74,7 +73,7 @@
     
     //添加黑色渐变阴影到模糊之后的图像上
     UIColor *topColor = [UIColor clearColor];
-    UIColor *bottomColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.6];
+    UIColor *bottomColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
     NSArray *gradientColors = [NSArray arrayWithObjects:(id)topColor.CGColor, (id)bottomColor.CGColor, nil];
     NSArray *gradientLocations = [NSArray arrayWithObjects:[NSNumber numberWithInt:0.0],[NSNumber numberWithInt:1.0], nil];
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
@@ -92,7 +91,7 @@
     blurBkgImgView.tag = TAG_BLUR_IMAGEVIEW;
 }
 
-
+//模糊算法
 - (UIImage *)blurImage:(UIImage *)image WithRadius:(CGFloat)blurRadius
 {
     if ((blurRadius < 0.0f) || (blurRadius > 1.0f)) {
@@ -158,15 +157,6 @@
     UIScrollView * bkgScrollView = (UIScrollView *)[self viewWithTag:TAG_BKGSCROLLVIEW];
     bkgScrollView.zoomScale = 1 +  + (fabs(MIN(contentOffsetY,0))/200.0f);
     
-    
-//    if (contentOffsetY <= 300 && contentOffsetY > 0) {
-//        CGFloat factor = contentOffsetY / 300;
-//        CGRect newBkgImgframe = CGRectMake(0, oldframe.origin.y - factor*35, oldframe.size.width, oldframe.size.height+factor*35);
-//        CGRect newBlurBkgImgframe = CGRectMake(0, 0, oldframe.size.width, oldframe.size.height+factor*35);
-//        self.bkgImageView.frame = newBkgImgframe;
-//        blurImgView.frame = newBlurBkgImgframe;
-//    }
-
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {

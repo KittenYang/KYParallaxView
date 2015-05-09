@@ -23,6 +23,7 @@
         if (useNib) {
             self = [[[NSBundle mainBundle]loadNibNamed:@"CustomViews" owner:self options:nil]firstObject];
             self.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.bounds.size.height);
+
             [self layoutIfNeeded];
         }
         [self customViews:(BOOL)useNib];
@@ -79,6 +80,8 @@
         
         self.box3.layer.cornerRadius = 3;
         self.box3.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
+
+        self.pic.layer.cornerRadius = 8;
     
     }
     

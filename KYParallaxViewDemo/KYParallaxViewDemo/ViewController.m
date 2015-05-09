@@ -19,9 +19,7 @@
 
 @end
 
-@implementation ViewController{
-    NSMutableArray *colors;
-}
+@implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,8 +34,6 @@
     //如果是要加视差滚动的collectionView
     self.parallaxHorizontalView = [[KYParallaxHorizontalView alloc]initWithFrame:self.view.frame andCollectionDelegate:self];
     [self.view addSubview:self.parallaxHorizontalView];
-    
-    colors = [NSMutableArray arrayWithObjects:[UIColor redColor],[UIColor yellowColor],[UIColor blueColor],[UIColor orangeColor],[UIColor greenColor] ,nil];
 
 }
 
@@ -53,9 +49,13 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     KYParallaxCollectionCell *cell = (KYParallaxCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"HorizontalParallexCell" forIndexPath:indexPath];
-    cell.backgroundColor  = colors[indexPath.item];
-    cell.verticalView.customView.label.text = [NSString stringWithFormat:@"第%ld页",(long)indexPath.item];
-
+    cell.verticalView.customView.label.text = [NSString stringWithFormat:@"第%ld页",(long)indexPath.item+1];
+    cell.verticalView.customView.avatar.image = [UIImage imageNamed:[NSString stringWithFormat:@"kitten_%ld",(long)indexPath.item+1]];
+    cell.verticalView.customView.pic.image = [UIImage imageNamed:[NSString stringWithFormat:@"l%ld.jpg",indexPath.item+1]];
+    cell.verticalView.scroller.contentOffset = CGPointMake(0, 0); //解决cell同时复用scrollview位置的bug
+    
+    //...自定义cell视图
+    
     return cell;
     
 }
@@ -64,7 +64,6 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [self.parallaxHorizontalView parallax:scrollView];
 }
-
 
 
 - (void)didReceiveMemoryWarning {

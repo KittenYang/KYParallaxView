@@ -14,7 +14,8 @@
 @property (strong, nonatomic) IBOutlet UIView *box1;
 @property (strong, nonatomic) IBOutlet UIView *box2;
 @property (strong, nonatomic) IBOutlet UIView *box3;
-
+@property (strong, nonatomic) IBOutlet UIImageView *avatar;
+@property (strong, nonatomic) IBOutlet UIImageView *pic;
 
 -(id)initWithUseNib:(BOOL)useNib;
 @end

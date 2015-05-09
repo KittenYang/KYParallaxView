@@ -19,8 +19,12 @@
 
 @implementation KYParallaxHorizontalView{
     KYParallaxCollectionLayout *layout;
-    UICollectionViewCell *currentCell;
-    UIImageView *parallaxImageView;
+    KYParallaxCollectionCell *currentCell;
+    UIImageView *leftParallaxImageView;
+    UIImageView *rightParallaxImageView;
+    NSInteger item;
+    
+    NSInteger currentIndex;
 }
 
 
@@ -49,25 +53,29 @@
     parallaxCollection.pagingEnabled = YES;
     
     [self addSubview:parallaxCollection];
-    
 }
 
 -(void)parallax:(UIScrollView *)horizontalView{
     
     UICollectionView *cv = (UICollectionView *)horizontalView;
-    NSInteger item = cv.contentOffset.x / cv.frame.size.width;
-//    NSLog(@"%ld",(long)item);
-//    NSLog(@"%@",[NSIndexPath indexPathForItem:item inSection:0]);
-    UICollectionViewCell *cell = [cv cellForItemAtIndexPath:[NSIndexPath indexPathForItem:item inSection:0]];
+    KYParallaxCollectionLayout*lat = (KYParallaxCollectionLayout *)cv.collectionViewLayout;
 
-    if (cell != nil && cell != currentCell ) {
-        currentCell = cell;
-        KYParallaxVerticalView *pvv = [currentCell.contentView.subviews firstObject];
-        parallaxImageView =  pvv.bkgImageView; //获得左边cell的图片
-        NSLog(@"%@",parallaxImageView);
-    }
+    item = cv.contentOffset.x / cv.frame.size.width;
+    NSLog(@"item:%ld",(long)item);
+
+    KYParallaxCollectionCell *leftCell = (KYParallaxCollectionCell *)[cv cellForItemAtIndexPath:[NSIndexPath indexPathForItem:item inSection:0]];
+    KYParallaxCollectionCell *rightCell = (KYParallaxCollectionCell *)[cv cellForItemAtIndexPath:[NSIndexPath indexPathForItem:item+1 inSection:0]];
+
+    //获得左边cell的图片
+    KYParallaxVerticalView *leftPvv = [leftCell.contentView.subviews firstObject];
+    leftParallaxImageView =  leftPvv.bkgImageView;
+    //获得右边cell的图片
+    KYParallaxVerticalView *rightPvv = [rightCell.contentView.subviews firstObject];
+    rightParallaxImageView = rightPvv.bkgImageView;
     
-//    parallaxImageView.frame = CGRectMake(cv.contentOffset.x - cv.frame.size.width*item, 0, parallaxImageView.frame.size.width - (cv.contentOffset.x - cv.frame.size.width*item), parallaxImageView.frame.size.height);
+    leftParallaxImageView.frame = CGRectMake(cv.contentOffset.x - cv.frame.size.width*item, 0, leftCell.frame.size.width - (cv.contentOffset.x - cv.frame.size.width*item), leftCell.frame.size.height);
+    rightParallaxImageView.frame = CGRectMake(0, 0, cv.contentOffset.x - cv.frame.size.width*item - lat.separatorWidth, rightCell.frame.size.height);
+
 }
 
 
