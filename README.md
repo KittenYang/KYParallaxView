@@ -16,9 +16,9 @@
 
 ##1、如果你不需要使用水平滚动的框架，只需要使用效果图中单页垂直滚动效果，那么你只需在你的ViewController中：
 ```objective-c
-  KYParallaxView *parallaxView= [[KYParallaxView alloc]initWithFrame:self.view.frame];
-  [self.view addSubview:self.parallaxView];
-  [self.parallaxView bkgImageViewSetImage: [UIImage imageNamed:@"bkgImg@2x.jpg"]];// 指定背景图
+    KYParallaxVerticalView *parallaxVerticalView= [[KYParallaxVerticalView alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:parallaxVerticalView];
+    [parallaxVerticalView bkgImageViewSetImage: [UIImage imageNamed:@"bkgImg@2x.jpg"]];// 指定背景图
 
 ```
 就可以了。
