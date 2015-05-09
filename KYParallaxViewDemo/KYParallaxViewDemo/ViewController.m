@@ -21,7 +21,7 @@
     [super viewDidLoad];
     self.parallaxView= [[KYParallaxView alloc]initWithFrame:self.view.frame];
     [self.view addSubview:self.parallaxView];
-    self.parallaxView.bkgImageView.image = [UIImage imageNamed:@"bkgImg@2x.jpg"];
+    [self.parallaxView bkgImageViewSetImage: [UIImage imageNamed:@"bkgImg@2x.jpg"]];
 
 }
 

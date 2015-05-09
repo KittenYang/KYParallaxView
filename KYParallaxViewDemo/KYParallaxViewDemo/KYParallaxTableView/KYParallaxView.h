@@ -13,7 +13,8 @@
 @interface KYParallaxView : UIView
 
 @property (nonatomic,strong)UIScrollView *scroller;
-@property (nonatomic,strong)UIImageView *bkgImageView;
 @property (nonatomic,strong)NSString *CellReuseIdentifier;
+
+-(void)bkgImageViewSetImage:(UIImage *)image;
 
 @end

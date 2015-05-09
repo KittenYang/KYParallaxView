@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F9372D41AFDF12A00C84D63 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9372D31AFDF12A00C84D63 /* UIImage+ImageEffects.m */; };
 		5FBB50321AFD1FD900EF4189 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB50311AFD1FD900EF4189 /* main.m */; };
 		5FBB50351AFD1FD900EF4189 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB50341AFD1FD900EF4189 /* AppDelegate.m */; };
 		5FBB50381AFD1FD900EF4189 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB50371AFD1FD900EF4189 /* ViewController.m */; };
@@ -15,7 +16,7 @@
 		5FBB50401AFD1FD900EF4189 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB503E1AFD1FD900EF4189 /* LaunchScreen.xib */; };
 		5FBB504C1AFD1FDA00EF4189 /* KYParallaxViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB504B1AFD1FDA00EF4189 /* KYParallaxViewDemoTests.m */; };
 		5FBB50571AFD224D00EF4189 /* KYParallaxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB50561AFD224D00EF4189 /* KYParallaxView.m */; };
-		5FDAC8151AFD441000B97F9C /* bkgImg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FDAC8141AFD441000B97F9C /* bkgImg@2x.jpg */; };
+		5FC827E51AFE1A5400E841AC /* bkgImg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5FC827E41AFE1A5400E841AC /* bkgImg@2x.jpg */; };
 		5FDAC8171AFD5B2900B97F9C /* CustomViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FDAC8161AFD5B2900B97F9C /* CustomViews.xib */; };
 		5FDAC81A1AFD5C5300B97F9C /* CustomViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDAC8191AFD5C5300B97F9C /* CustomViews.m */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F9372D21AFDF12A00C84D63 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		5F9372D31AFDF12A00C84D63 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		5FBB502C1AFD1FD900EF4189 /* KYParallaxViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KYParallaxViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBB50301AFD1FD900EF4189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FBB50311AFD1FD900EF4189 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,7 +49,7 @@
 		5FBB504B1AFD1FDA00EF4189 /* KYParallaxViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYParallaxViewDemoTests.m; sourceTree = "<group>"; };
 		5FBB50551AFD224D00EF4189 /* KYParallaxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KYParallaxView.h; path = KYParallaxTableView/KYParallaxView.h; sourceTree = "<group>"; };
 		5FBB50561AFD224D00EF4189 /* KYParallaxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KYParallaxView.m; path = KYParallaxTableView/KYParallaxView.m; sourceTree = "<group>"; };
-		5FDAC8141AFD441000B97F9C /* bkgImg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bkgImg@2x.jpg"; sourceTree = "<group>"; };
+		5FC827E41AFE1A5400E841AC /* bkgImg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bkgImg@2x.jpg"; sourceTree = "<group>"; };
 		5FDAC8161AFD5B2900B97F9C /* CustomViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomViews.xib; path = KYParallaxTableView/CustomViews.xib; sourceTree = "<group>"; };
 		5FDAC8181AFD5C5300B97F9C /* CustomViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomViews.h; path = KYParallaxTableView/CustomViews.h; sourceTree = "<group>"; };
 		5FDAC8191AFD5C5300B97F9C /* CustomViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomViews.m; path = KYParallaxTableView/CustomViews.m; sourceTree = "<group>"; };
@@ -70,6 +73,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F9372D51AFDF13200C84D63 /* UIImage+ImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				5F9372D21AFDF12A00C84D63 /* UIImage+ImageEffects.h */,
+				5F9372D31AFDF12A00C84D63 /* UIImage+ImageEffects.m */,
+			);
+			name = "UIImage+ImageEffects";
+			sourceTree = "<group>";
+		};
+		5F9372D61AFDF13D00C84D63 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				5FDAC8161AFD5B2900B97F9C /* CustomViews.xib */,
+				5FDAC8181AFD5C5300B97F9C /* CustomViews.h */,
+				5FDAC8191AFD5C5300B97F9C /* CustomViews.m */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
 		5FBB50231AFD1FD900EF4189 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +117,7 @@
 				5FBB50341AFD1FD900EF4189 /* AppDelegate.m */,
 				5FBB50361AFD1FD900EF4189 /* ViewController.h */,
 				5FBB50371AFD1FD900EF4189 /* ViewController.m */,
+				5FC827E41AFE1A5400E841AC /* bkgImg@2x.jpg */,
 				5FBB50581AFD229700EF4189 /* KYParallaxTableView */,
 				5FBB50391AFD1FD900EF4189 /* Main.storyboard */,
 				5FBB503C1AFD1FD900EF4189 /* Images.xcassets */,
@@ -133,12 +156,10 @@
 		5FBB50581AFD229700EF4189 /* KYParallaxTableView */ = {
 			isa = PBXGroup;
 			children = (
-				5FDAC8161AFD5B2900B97F9C /* CustomViews.xib */,
-				5FDAC8181AFD5C5300B97F9C /* CustomViews.h */,
-				5FDAC8191AFD5C5300B97F9C /* CustomViews.m */,
+				5F9372D51AFDF13200C84D63 /* UIImage+ImageEffects */,
+				5F9372D61AFDF13D00C84D63 /* CustomViews */,
 				5FBB50551AFD224D00EF4189 /* KYParallaxView.h */,
 				5FBB50561AFD224D00EF4189 /* KYParallaxView.m */,
-				5FDAC8141AFD441000B97F9C /* bkgImg@2x.jpg */,
 			);
 			name = KYParallaxTableView;
 			sourceTree = "<group>";
@@ -226,8 +247,8 @@
 				5FBB503B1AFD1FD900EF4189 /* Main.storyboard in Resources */,
 				5FDAC8171AFD5B2900B97F9C /* CustomViews.xib in Resources */,
 				5FBB50401AFD1FD900EF4189 /* LaunchScreen.xib in Resources */,
-				5FDAC8151AFD441000B97F9C /* bkgImg@2x.jpg in Resources */,
 				5FBB503D1AFD1FD900EF4189 /* Images.xcassets in Resources */,
+				5FC827E51AFE1A5400E841AC /* bkgImg@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +268,7 @@
 			files = (
 				5FBB50571AFD224D00EF4189 /* KYParallaxView.m in Sources */,
 				5FBB50381AFD1FD900EF4189 /* ViewController.m in Sources */,
+				5F9372D41AFDF12A00C84D63 /* UIImage+ImageEffects.m in Sources */,
 				5FBB50351AFD1FD900EF4189 /* AppDelegate.m in Sources */,
 				5FBB50321AFD1FD900EF4189 /* main.m in Sources */,
 				5FDAC81A1AFD5C5300B97F9C /* CustomViews.m in Sources */,
