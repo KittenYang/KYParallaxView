@@ -6,8 +6,11 @@
 //  Copyright (c) 2015 Kitten Yang. All rights reserved.
 //
 
+
 #import "KYParallaxHorizontalView.h"
 #import "KYParallaxCollectionLayout.h"
+#import "KYParallaxVerticalView.h"
+#import "KYParallaxCollectionCell.h"
 
 
 @interface KYParallaxHorizontalView()<UIScrollViewDelegate>
@@ -16,6 +19,8 @@
 
 @implementation KYParallaxHorizontalView{
     KYParallaxCollectionLayout *layout;
+    UICollectionViewCell *currentCell;
+    UIImageView *parallaxImageView;
 }
 
 
@@ -38,7 +43,7 @@
 
     
     UICollectionView *parallaxCollection = [[UICollectionView alloc]initWithFrame:frame collectionViewLayout:layout];
-    [parallaxCollection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionCell"];
+    [parallaxCollection registerClass:[KYParallaxCollectionCell class] forCellWithReuseIdentifier:@"HorizontalParallexCell"];
     parallaxCollection.delegate = delegate;
     parallaxCollection.dataSource = delegate;
     parallaxCollection.pagingEnabled = YES;
@@ -48,10 +53,25 @@
 }
 
 -(void)parallax:(UIScrollView *)horizontalView{
-    NSLog(@"parallax");
     
     UICollectionView *cv = (UICollectionView *)horizontalView;
+    NSInteger item = cv.contentOffset.x / cv.frame.size.width;
+//    NSLog(@"%ld",(long)item);
+//    NSLog(@"%@",[NSIndexPath indexPathForItem:item inSection:0]);
+    UICollectionViewCell *cell = [cv cellForItemAtIndexPath:[NSIndexPath indexPathForItem:item inSection:0]];
+
+    if (cell != nil && cell != currentCell ) {
+        currentCell = cell;
+        KYParallaxVerticalView *pvv = [currentCell.contentView.subviews firstObject];
+        parallaxImageView =  pvv.bkgImageView; //获得左边cell的图片
+        NSLog(@"%@",parallaxImageView);
+    }
     
+//    parallaxImageView.frame = CGRectMake(cv.contentOffset.x - cv.frame.size.width*item, 0, parallaxImageView.frame.size.width - (cv.contentOffset.x - cv.frame.size.width*item), parallaxImageView.frame.size.height);
 }
+
+
+
+
 
 @end

@@ -16,12 +16,10 @@
 
 
 #import "KYParallaxVerticalView.h"
-#import "CustomViews.h"
 #import <Accelerate/Accelerate.h>
 
 @interface KYParallaxVerticalView()<UIScrollViewDelegate>
 
-@property (nonatomic,strong)UIImageView *bkgImageView;
 
 @end
 
@@ -51,7 +49,7 @@
     
     //添加背景视图
     self.bkgImageView = [[UIImageView alloc]initWithFrame:bkgScrollView.frame];
-    self.bkgImageView.contentMode = UIViewContentModeCenter;
+    self.bkgImageView.contentMode = UIViewContentModeScaleAspectFill;
     [bkgScrollView addSubview:self.bkgImageView];
     
     //添加显现内容的滚动视图
@@ -60,9 +58,9 @@
     [self insertSubview:self.scroller aboveSubview:bkgScrollView];
     
     //添加自定义视图
-    CustomViews *customView = [[CustomViews alloc]initWithUseNib:YES];
-    self.scroller.contentSize = customView.bounds.size;
-    [self.scroller addSubview:customView];
+    self.customView = [[CustomViews alloc]initWithUseNib:YES];
+    self.scroller.contentSize = self.customView.bounds.size;
+    [self.scroller addSubview:self.customView];
 
 }
 

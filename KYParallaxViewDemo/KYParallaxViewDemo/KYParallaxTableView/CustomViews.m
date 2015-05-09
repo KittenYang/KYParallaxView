@@ -10,10 +10,7 @@
 
 @interface CustomViews()
 
-@property (strong, nonatomic) IBOutlet UILabel *label;
-@property (strong, nonatomic) IBOutlet UIView *box1;
-@property (strong, nonatomic) IBOutlet UIView *box2;
-@property (strong, nonatomic) IBOutlet UIView *box3;
+
 
 @end
 

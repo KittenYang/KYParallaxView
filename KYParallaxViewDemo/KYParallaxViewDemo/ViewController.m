@@ -10,6 +10,7 @@
 #import "KYParallaxVerticalView.h"
 #import "KYParallaxHorizontalView.h"
 #import "KYParallaxCollectionLayout.h"
+#import "KYParallaxCollectionCell.h"
 
 @interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
@@ -42,7 +43,7 @@
 
 
 
-#pragma mark -- UICollectionViewDelegate
+#pragma mark -- UICollectionDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
     return 5;
@@ -50,11 +51,11 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
+    
+    KYParallaxCollectionCell *cell = (KYParallaxCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"HorizontalParallexCell" forIndexPath:indexPath];
     cell.backgroundColor  = colors[indexPath.item];
-    KYParallaxVerticalView * verticalView = [[KYParallaxVerticalView alloc]initWithFrame:CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height)];
-    [verticalView bkgImageViewSetImage: [UIImage imageNamed:@"bkgImg@2x.jpg"]];
-    [cell addSubview:verticalView];
+    cell.verticalView.customView.label.text = [NSString stringWithFormat:@"第%ld页",(long)indexPath.item];
+
     return cell;
     
 }

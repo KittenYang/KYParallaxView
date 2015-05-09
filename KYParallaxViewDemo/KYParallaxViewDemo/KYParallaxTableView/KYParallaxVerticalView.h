@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CustomViews.h"
 
 
 @interface KYParallaxVerticalView : UIView
 
 @property (nonatomic,strong)UIScrollView *scroller;
-@property (nonatomic,strong)NSString *CellReuseIdentifier;
-
+@property (nonatomic,strong)UIImageView *bkgImageView;
+@property (nonatomic,strong)CustomViews *customView;
 -(void)bkgImageViewSetImage:(UIImage *)image;
+
+
 
 @end
