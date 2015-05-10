@@ -11,15 +11,17 @@
 
 
 
-一个 it's a
+一个
 
-**1.使用简单** easy-to-use
+**1.使用简单** 
 
-**2.高度自定义**highly customize
+**2.高度自定义**
 
-**3.两种使用方法** two way to use
+**3.两种使用方法** 
 
-的视差滚动框架 parallax effects framework
+的视差滚动框架 
+
+it's a easy-to-use / highly customize / two way to use parallax effects framework.
 
 ![](parallax.gif)
 
