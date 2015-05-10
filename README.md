@@ -34,9 +34,11 @@
 ##本框架有两种使用场景：
 
 Two situations to use this framework：
----
 
-##1、如果你不需要使用水平滚动的框架，只需要使用效果图中单页垂直滚动效果，那么你只需在你的ViewController中。 If you just wanna use the single vertical scroll view,you should:
+##1、如果你不需要使用水平滚动的框架，只需要使用效果图中单页垂直滚动效果，那么你只需在你的ViewController中。 
+
+
+If you just wanna use the single vertical scroll view,you should:
 
 ```objective-c
     KYParallaxVerticalView *parallaxVerticalView= [[KYParallaxVerticalView alloc]initWithFrame:self.view.frame];
@@ -53,7 +55,7 @@ That's it!
 ##2、如果你需要使用整个框架，那么你需要在你的ViewController中：
 
 If you wanna use the whole framework.
------
+
 ```objective-c
   KYParallaxHorizontalView *parallaxHorizontalView = [[KYParallaxHorizontalView alloc]initWithFrame:self.view.frame andCollectionDelegate:self];
   [self.view addSubview:self.parallaxHorizontalView];
