@@ -12,9 +12,19 @@
 
 ![](parallax.gif)
 
-##本框架有两种使用场景：
 
-##1、如果你不需要使用水平滚动的框架，只需要使用效果图中单页垂直滚动效果，那么你只需在你的ViewController中：
+##安装 Installation
+====================================
+`pod 'KYParallaxView', '~> 1.0.1'`
+
+---
+
+
+##本框架有两种使用场景： Two situations to use this framework：
+====================================
+
+##1、如果你不需要使用水平滚动的框架，只需要使用效果图中单页垂直滚动效果，那么你只需在你的ViewController中。 If you just wanna use the single vertical scroll view,you should:
+
 ```objective-c
     KYParallaxVerticalView *parallaxVerticalView= [[KYParallaxVerticalView alloc]initWithFrame:self.view.frame];
     [self.view addSubview:parallaxVerticalView];
@@ -23,15 +33,17 @@
 ```
 就可以了。
 
-##如何自定义单页垂直滚动视图？
+##如何自定义单页滚动视图内容？How to customize the vertical scroll view's  content?
 
-进入`CustomViews.h`,你会发现有三个文件
+进入`CustomViews.h`,你会发现有三个文件. In `CustomViews.h`，there are three files.
 
 ![](customView.png)
 
-你会发现CustomViewXib是这样的：
+你会发现CustomViewXib是这样的：So you can customize your content in the xib.
 
 ![](customViewXib.png)
+
+Also you can use IBOutlet to connect the xib and the code.
 
 是的，你可以在这里可视化布局你想要的滚动界面。当然，为了方便自定义内容你还需要把这些视图拖到代码中来：
 
@@ -45,14 +57,16 @@
 
 ```
 
-##2、如果你整一个水平滚动的框架，那么你需要在你的ViewController中：
+##2、如果你整一个水平滚动的框架，那么你需要在你的ViewController中：If you wanna use the whole framework.
+====================================
 ```objective-c
   KYParallaxHorizontalView *parallaxHorizontalView = [[KYParallaxHorizontalView alloc]initWithFrame:self.view.frame andCollectionDelegate:self];
   [self.view addSubview:self.parallaxHorizontalView];
 
 ```
 
-然后实现UICollectionDataSource的协议方法：
+
+然后实现UICollectionDataSource的协议方法： Then implement the UICollectionDataSource's protocol method:
 
 ```objective-c
 #pragma mark -- UICollectionDataSource
@@ -78,7 +92,8 @@
 `
 ```
 
-最后你还需要实现UITableViewDelegate中的scrollViewDidScroll方法：
+
+最后你还需要实现UIScrollViewDelegate中的scrollViewDidScroll方法： Lastly,you should mplement the UIScrollViewDelegate's protocol method
 ```objective-c
 #pragma mark -- UITableViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
