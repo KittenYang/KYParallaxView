@@ -106,7 +106,7 @@ Lastly,you should mplement the UIScrollViewDelegate's protocol method
 
 How to customize the vertical scroll view's  content?
 
-进入`CustomViews.h`,你会发现有三个文件. In `CustomViews.h`，there are three files.
+你会发现有三个文件. there are three files.
 
 ![](customView.png)
 
