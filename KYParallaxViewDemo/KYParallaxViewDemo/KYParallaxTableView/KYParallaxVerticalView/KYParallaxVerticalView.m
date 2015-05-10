@@ -20,7 +20,7 @@
 
 @interface KYParallaxVerticalView()<UIScrollViewDelegate>
 
-@property (nonatomic,strong)UIImageView *bkgImageView;
+
 
 @end
 
