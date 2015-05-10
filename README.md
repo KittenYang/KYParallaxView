@@ -80,17 +80,22 @@ Then implement the UICollectionDataSource's protocol method:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     KYParallaxCollectionCell *cell = (KYParallaxCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"HorizontalParallexCell" forIndexPath:indexPath];
+
+    /*****自定义cell视图*****/
+    /*****Custom the vertical scrollview content******/
+    //设置每个单页的背景图片 Set the background img of every vertical scrollview
+    [cell.verticalView bkgImageViewSetImage:[UIImage imageNamed:[NSString stringWithFormat:@"bkgImg_%ld.jpg",(long)indexPath.item+1]]];
     cell.verticalView.customView.label.text = [NSString stringWithFormat:@"第%ld页",(long)indexPath.item+1];
     cell.verticalView.customView.avatar.image = [UIImage imageNamed:[NSString stringWithFormat:@"kitten_%ld",(long)indexPath.item+1]];
     cell.verticalView.customView.pic.image = [UIImage imageNamed:[NSString stringWithFormat:@"l%ld.jpg",indexPath.item+1]];
-    cell.verticalView.scroller.contentOffset = CGPointMake(0, 0); //解决cell同时复用scrollview位置的bug
+    cell.verticalView.scroller.contentOffset = CGPointMake(0, 0); //解决cell同时复用scrollview位置的bug  Fix resuing the contentOffset of cell
     
-    //...自定义cell视图
+    //...
     
     return cell;
     
 }
-`
+
 ```
 
 
