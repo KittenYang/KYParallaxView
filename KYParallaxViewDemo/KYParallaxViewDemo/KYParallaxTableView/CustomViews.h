@@ -17,5 +17,5 @@
 @property (strong, nonatomic) IBOutlet UIImageView *avatar;
 @property (strong, nonatomic) IBOutlet UIImageView *pic;
 
--(id)initWithUseNib:(BOOL)useNib;
+-(id)initWithUseNib:(BOOL)useNib withSuperViewFrame:(CGRect)superViewFrame;
 @end

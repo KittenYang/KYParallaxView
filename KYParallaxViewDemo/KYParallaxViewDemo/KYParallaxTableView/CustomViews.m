@@ -17,12 +17,12 @@
 @implementation CustomViews
 
 
--(id)initWithUseNib:(BOOL)useNib{
+-(id)initWithUseNib:(BOOL)useNib withSuperViewFrame:(CGRect)superViewFrame{
     self = [super init];
     if (self) {
         if (useNib) {
             self = [[[NSBundle mainBundle]loadNibNamed:@"CustomViews" owner:self options:nil]firstObject];
-            self.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.bounds.size.height);
+            self.frame = CGRectMake(0, 0, superViewFrame.size.width, self.bounds.size.height);
 
             [self layoutIfNeeded];
         }

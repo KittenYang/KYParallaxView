@@ -13,10 +13,10 @@
 @interface KYParallaxVerticalView : UIView
 
 @property (nonatomic,strong)UIScrollView *scroller;
-@property (nonatomic,strong)UIImageView *bkgImageView;
 @property (nonatomic,strong)CustomViews *customView;
+
+
+//设置竖直滚动页面的背景图方法
 -(void)bkgImageViewSetImage:(UIImage *)image;
-
-
 
 @end

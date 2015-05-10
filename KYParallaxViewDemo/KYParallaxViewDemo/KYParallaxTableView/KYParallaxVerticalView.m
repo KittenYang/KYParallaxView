@@ -20,11 +20,12 @@
 
 @interface KYParallaxVerticalView()<UIScrollViewDelegate>
 
+@property (nonatomic,strong)UIImageView *bkgImageView;
 
 @end
 
 @implementation KYParallaxVerticalView{
-    CGRect oldframe;
+    UIImageView *blurBkgImgView;
 }
 
 -(id)initWithFrame:(CGRect)frame{
@@ -39,41 +40,38 @@
 
 -(void)initViews:(CGRect)frame{
     UIScrollView *bkgScrollView = [[UIScrollView alloc]initWithFrame:frame];
-    oldframe = bkgScrollView.frame;
     bkgScrollView.tag = TAG_BKGSCROLLVIEW;
     bkgScrollView.delegate = self;
     bkgScrollView.minimumZoomScale = 1.0f;
     bkgScrollView.maximumZoomScale = 2.0f;
     [self addSubview:bkgScrollView];
     
-    //添加背景视图
-    self.bkgImageView = [[UIImageView alloc]initWithFrame:bkgScrollView.frame];
-    self.bkgImageView.contentMode = UIViewContentModeCenter;
-    [bkgScrollView addSubview:self.bkgImageView];
     
-    //添加显现内容的滚动视图
+    //添加显现内容的滚动视图  Add a scroll view
     self.scroller = [[UIScrollView alloc]initWithFrame:frame];
     self.scroller.delegate = self;
     [self insertSubview:self.scroller aboveSubview:bkgScrollView];
     
-    //添加自定义视图
-    self.customView = [[CustomViews alloc]initWithUseNib:YES];
+    //添加自定义视图 Add custom view which show the vertical scroll view's content
+    self.customView = [[CustomViews alloc]initWithUseNib:YES withSuperViewFrame:frame];
     self.scroller.contentSize = self.customView.bounds.size;
     [self.scroller addSubview:self.customView];
-
-}
-
--(void)bkgImageViewSetImage:(UIImage *)image{
-    self.bkgImageView.image = image;
     
-    UIImageView *blurBkgImgView = [[UIImageView alloc]initWithFrame:self.bkgImageView.frame];
+    
+    //添加背景图片视图 Add backgroundImage view
+    self.bkgImageView = [[UIImageView alloc]initWithFrame:bkgScrollView.frame];
+    self.bkgImageView.contentMode = UIViewContentModeCenter;
+    [bkgScrollView addSubview:self.bkgImageView];
+    
+    //添加模糊视图 Add blured image view
+    blurBkgImgView = [[UIImageView alloc]initWithFrame:self.bkgImageView.frame];
     [self.bkgImageView addSubview:blurBkgImgView];
-    UIImage *blurImage  = [self blurImage:image WithRadius:0.5];
+    blurBkgImgView.alpha = 0.0f;
+    blurBkgImgView.tag = TAG_BLUR_IMAGEVIEW;
     
-    
-    //添加黑色渐变阴影到模糊之后的图像上
+    //添加黑色渐变阴影到模糊之后的图像上  Add gradientLayer to the blured image
     UIColor *topColor = [UIColor clearColor];
-    UIColor *bottomColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+    UIColor *bottomColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0];
     NSArray *gradientColors = [NSArray arrayWithObjects:(id)topColor.CGColor, (id)bottomColor.CGColor, nil];
     NSArray *gradientLocations = [NSArray arrayWithObjects:[NSNumber numberWithInt:0.0],[NSNumber numberWithInt:1.0], nil];
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
@@ -85,10 +83,18 @@
     gradientView.tag = TAG_GRADIENTVIEW;
     [gradientView.layer addSublayer:gradientLayer];
     [self insertSubview:gradientView belowSubview:self.scroller];
-    
+
+}
+
+-(void)bkgImageViewSetImage:(UIImage *)image{
+
+    //set background image
+    self.bkgImageView.image = image;
+
+    //set blur background image
+    UIImage *blurImage  = [self blurImage:image WithRadius:0.5];
     blurBkgImgView.image = blurImage;
-    blurBkgImgView.alpha = 0.0f;
-    blurBkgImgView.tag = TAG_BLUR_IMAGEVIEW;
+
 }
 
 //模糊算法
