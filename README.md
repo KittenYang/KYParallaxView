@@ -1,6 +1,6 @@
-# KYParallaxView
+![](logo.png)
 
-一个
+一个 it's a
 
 **1.使用简单** easy-to-use
 
@@ -8,7 +8,7 @@
 
 **3.两种使用方法** two way to use
 
-的视差滚动框架
+的视差滚动框架 parallax effects framework
 
 ![](parallax.gif)
 
