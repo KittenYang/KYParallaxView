@@ -10,7 +10,6 @@
 #import "KYParallaxHorizontalView.h"
 #import "KYParallaxCollectionLayout.h"
 #import "KYParallaxVerticalView.h"
-#import "KYParallaxCollectionCell.h"
 
 
 @interface KYParallaxHorizontalView()<UIScrollViewDelegate>
