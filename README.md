@@ -4,7 +4,7 @@
 </p>
 
 
-![CocoaPods Version](https://img.shields.io/badge/pod-v1.0.1-brightgreen.svg)
+![CocoaPods Version](https://img.shields.io/badge/pod-v1.0.2-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-iOS-red.svg)
 
@@ -28,7 +28,7 @@ it's a easy-to-use / highly customize / two way to use parallax effects framewor
 
 ##安装 Installation
 ---
-`pod 'KYParallaxView', '~> 1.0.1'`
+`pod 'KYParallaxView', '~> 1.0.2'`
 
 ---
 
