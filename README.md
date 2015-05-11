@@ -40,7 +40,7 @@ Two situations to use this framework：
 ##1、如果你不需要使用水平滚动的框架，只需要使用效果图中单页垂直滚动效果，那么你只需在你的ViewController中。 
 
 
-If you just wanna use the single vertical scroll view,you should:
+- If you just wanna use the single vertical scroll view,you should:
 
 ```objective-c
     KYParallaxVerticalView *parallaxVerticalView= [[KYParallaxVerticalView alloc]initWithFrame:self.view.frame];
@@ -48,15 +48,15 @@ If you just wanna use the single vertical scroll view,you should:
     [parallaxVerticalView bkgImageViewSetImage: [UIImage imageNamed:@"bkgImg@2x.jpg"]];// 指定背景图
 
 ```
-就可以了。
+    就可以了。
 
-That's it!
+    That's it!
 
 
 
 ##2、如果你需要使用整个框架，那么你需要在你的ViewController中：
 
-If you wanna use the whole framework.
+     If you wanna use the whole framework.
 
 ```objective-c
   KYParallaxHorizontalView *parallaxHorizontalView = [[KYParallaxHorizontalView alloc]initWithFrame:self.view.frame andCollectionDelegate:self];
@@ -65,9 +65,9 @@ If you wanna use the whole framework.
 ```
 
 
-然后实现UICollectionDataSource的协议方法： 
+- 然后实现UICollectionDataSource的协议方法： 
 
-Then implement the UICollectionDataSource's protocol method:
+    Then implement the UICollectionDataSource's protocol method:
 
 ```objective-c
 #pragma mark -- UICollectionDataSource
@@ -99,9 +99,9 @@ Then implement the UICollectionDataSource's protocol method:
 ```
 
 
-最后你还需要实现UIScrollViewDelegate中的scrollViewDidScroll方法： 
+- 最后你还需要实现UIScrollViewDelegate中的scrollViewDidScroll方法： 
 
-Lastly,you should mplement the UIScrollViewDelegate's protocol method
+    Lastly,you should mplement the UIScrollViewDelegate's protocol method
 ```objective-c
 #pragma mark -- UITableViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -111,22 +111,22 @@ Lastly,you should mplement the UIScrollViewDelegate's protocol method
 
 ##3.如何自定义单页滚动视图内容？
 
-How to customize the vertical scroll view's  content?
+    How to customize the vertical scroll view's  content?
 
-你会发现有三个文件. there are three files.
+- 你会发现有三个文件. there are three files.
 
 ![](customView.png)
 
-你会发现CustomViewXib是这样的：
+- 你会发现CustomViewXib是这样的：
 
-So you can customize your content in the xib.
+  So you can customize your content in the xib.
 
 ![](customViewXib.png)
 
 
-是的，你可以在这里可视化布局你想要的滚动界面的内容。当然，为了方便自定义内容你还需要把这些视图拖到代码中来：
+- 是的，你可以在这里可视化布局你想要的滚动界面的内容。当然，为了方便自定义内容你还需要把这些视图拖到代码中来：
 
-Also you can use IBOutlet to connect the xib and the code.
+  Also you can use IBOutlet to connect the xib and the code.
 
 ```objective-c
 @property (strong, nonatomic) IBOutlet UILabel *label;
