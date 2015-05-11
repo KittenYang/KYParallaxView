@@ -14,12 +14,12 @@
 		5FBB503D1AFD1FD900EF4189 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB503C1AFD1FD900EF4189 /* Images.xcassets */; };
 		5FBB50401AFD1FD900EF4189 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB503E1AFD1FD900EF4189 /* LaunchScreen.xib */; };
 		5FBB504C1AFD1FDA00EF4189 /* KYParallaxViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBB504B1AFD1FDA00EF4189 /* KYParallaxViewDemoTests.m */; };
-		5FC828101AFF6F2F00E841AC /* CustomViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC8280E1AFF6F2F00E841AC /* CustomViews.m */; };
-		5FC828111AFF6F2F00E841AC /* CustomViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC8280F1AFF6F2F00E841AC /* CustomViews.xib */; };
-		5FC828171AFF6F5000E841AC /* KYParallaxVerticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC828161AFF6F5000E841AC /* KYParallaxVerticalView.m */; };
-		5FC8281A1AFF6F5600E841AC /* KYParallaxHorizontalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC828191AFF6F5600E841AC /* KYParallaxHorizontalView.m */; };
-		5FC8281F1AFF6F5C00E841AC /* KYParallaxCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC8281C1AFF6F5C00E841AC /* KYParallaxCollectionCell.m */; };
-		5FC828201AFF6F5C00E841AC /* KYParallaxCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC8281E1AFF6F5C00E841AC /* KYParallaxCollectionLayout.m */; };
+		5FC828281B00AE6500E841AC /* KYParallaxHorizontalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC828271B00AE6500E841AC /* KYParallaxHorizontalView.m */; };
+		5FC8282D1B00AE6E00E841AC /* KYParallaxCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC8282A1B00AE6E00E841AC /* KYParallaxCollectionCell.m */; };
+		5FC8282E1B00AE6E00E841AC /* KYParallaxCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC8282C1B00AE6E00E841AC /* KYParallaxCollectionLayout.m */; };
+		5FC828321B00AE7D00E841AC /* CustomViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC828301B00AE7D00E841AC /* CustomViews.m */; };
+		5FC828331B00AE7D00E841AC /* CustomViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FC828311B00AE7D00E841AC /* CustomViews.xib */; };
+		5FC828361B00AE8300E841AC /* KYParallaxVerticalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC828351B00AE8300E841AC /* KYParallaxVerticalView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,17 +46,17 @@
 		5FBB50451AFD1FDA00EF4189 /* KYParallaxViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KYParallaxViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FBB504A1AFD1FDA00EF4189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FBB504B1AFD1FDA00EF4189 /* KYParallaxViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYParallaxViewDemoTests.m; sourceTree = "<group>"; };
-		5FC8280D1AFF6F2F00E841AC /* CustomViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomViews.h; path = KYParallaxViewClasses/CustomViews/CustomViews.h; sourceTree = "<group>"; };
-		5FC8280E1AFF6F2F00E841AC /* CustomViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomViews.m; path = KYParallaxViewClasses/CustomViews/CustomViews.m; sourceTree = "<group>"; };
-		5FC8280F1AFF6F2F00E841AC /* CustomViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomViews.xib; path = KYParallaxViewClasses/CustomViews/CustomViews.xib; sourceTree = "<group>"; };
-		5FC828151AFF6F5000E841AC /* KYParallaxVerticalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KYParallaxVerticalView.h; path = KYParallaxViewClasses/KYParallaxVerticalView/KYParallaxVerticalView.h; sourceTree = "<group>"; };
-		5FC828161AFF6F5000E841AC /* KYParallaxVerticalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KYParallaxVerticalView.m; path = KYParallaxViewClasses/KYParallaxVerticalView/KYParallaxVerticalView.m; sourceTree = "<group>"; };
-		5FC828181AFF6F5600E841AC /* KYParallaxHorizontalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KYParallaxHorizontalView.h; path = KYParallaxViewClasses/KYParallaxHorizontalView/KYParallaxHorizontalView.h; sourceTree = "<group>"; };
-		5FC828191AFF6F5600E841AC /* KYParallaxHorizontalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KYParallaxHorizontalView.m; path = KYParallaxViewClasses/KYParallaxHorizontalView/KYParallaxHorizontalView.m; sourceTree = "<group>"; };
-		5FC8281B1AFF6F5C00E841AC /* KYParallaxCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KYParallaxCollectionCell.h; path = KYParallaxViewClasses/KYParallaxHorizontalView/KYParallaxCollection/KYParallaxCollectionCell.h; sourceTree = "<group>"; };
-		5FC8281C1AFF6F5C00E841AC /* KYParallaxCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KYParallaxCollectionCell.m; path = KYParallaxViewClasses/KYParallaxHorizontalView/KYParallaxCollection/KYParallaxCollectionCell.m; sourceTree = "<group>"; };
-		5FC8281D1AFF6F5C00E841AC /* KYParallaxCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KYParallaxCollectionLayout.h; path = KYParallaxViewClasses/KYParallaxHorizontalView/KYParallaxCollection/KYParallaxCollectionLayout.h; sourceTree = "<group>"; };
-		5FC8281E1AFF6F5C00E841AC /* KYParallaxCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KYParallaxCollectionLayout.m; path = KYParallaxViewClasses/KYParallaxHorizontalView/KYParallaxCollection/KYParallaxCollectionLayout.m; sourceTree = "<group>"; };
+		5FC828261B00AE6500E841AC /* KYParallaxHorizontalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KYParallaxHorizontalView.h; path = ../../KYParallaxView/KYParallaxHorizontalView/KYParallaxHorizontalView.h; sourceTree = "<group>"; };
+		5FC828271B00AE6500E841AC /* KYParallaxHorizontalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KYParallaxHorizontalView.m; path = ../../KYParallaxView/KYParallaxHorizontalView/KYParallaxHorizontalView.m; sourceTree = "<group>"; };
+		5FC828291B00AE6E00E841AC /* KYParallaxCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KYParallaxCollectionCell.h; path = ../../KYParallaxView/KYParallaxHorizontalView/KYParallaxCollection/KYParallaxCollectionCell.h; sourceTree = "<group>"; };
+		5FC8282A1B00AE6E00E841AC /* KYParallaxCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KYParallaxCollectionCell.m; path = ../../KYParallaxView/KYParallaxHorizontalView/KYParallaxCollection/KYParallaxCollectionCell.m; sourceTree = "<group>"; };
+		5FC8282B1B00AE6E00E841AC /* KYParallaxCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KYParallaxCollectionLayout.h; path = ../../KYParallaxView/KYParallaxHorizontalView/KYParallaxCollection/KYParallaxCollectionLayout.h; sourceTree = "<group>"; };
+		5FC8282C1B00AE6E00E841AC /* KYParallaxCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KYParallaxCollectionLayout.m; path = ../../KYParallaxView/KYParallaxHorizontalView/KYParallaxCollection/KYParallaxCollectionLayout.m; sourceTree = "<group>"; };
+		5FC8282F1B00AE7D00E841AC /* CustomViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomViews.h; path = ../../KYParallaxView/CustomViews/CustomViews.h; sourceTree = "<group>"; };
+		5FC828301B00AE7D00E841AC /* CustomViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomViews.m; path = ../../KYParallaxView/CustomViews/CustomViews.m; sourceTree = "<group>"; };
+		5FC828311B00AE7D00E841AC /* CustomViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomViews.xib; path = ../../KYParallaxView/CustomViews/CustomViews.xib; sourceTree = "<group>"; };
+		5FC828341B00AE8300E841AC /* KYParallaxVerticalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KYParallaxVerticalView.h; path = ../../KYParallaxView/KYParallaxVerticalView/KYParallaxVerticalView.h; sourceTree = "<group>"; };
+		5FC828351B00AE8300E841AC /* KYParallaxVerticalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KYParallaxVerticalView.m; path = ../../KYParallaxView/KYParallaxVerticalView/KYParallaxVerticalView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 		5F9372D61AFDF13D00C84D63 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				5FC8280D1AFF6F2F00E841AC /* CustomViews.h */,
-				5FC8280E1AFF6F2F00E841AC /* CustomViews.m */,
-				5FC8280F1AFF6F2F00E841AC /* CustomViews.xib */,
+				5FC8282F1B00AE7D00E841AC /* CustomViews.h */,
+				5FC828301B00AE7D00E841AC /* CustomViews.m */,
+				5FC828311B00AE7D00E841AC /* CustomViews.xib */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -160,8 +160,8 @@
 		5FC827E91AFE1C1700E841AC /* KYParallaxVerticalView */ = {
 			isa = PBXGroup;
 			children = (
-				5FC828151AFF6F5000E841AC /* KYParallaxVerticalView.h */,
-				5FC828161AFF6F5000E841AC /* KYParallaxVerticalView.m */,
+				5FC828341B00AE8300E841AC /* KYParallaxVerticalView.h */,
+				5FC828351B00AE8300E841AC /* KYParallaxVerticalView.m */,
 			);
 			name = KYParallaxVerticalView;
 			sourceTree = "<group>";
@@ -169,8 +169,8 @@
 		5FC827F71AFE77AF00E841AC /* KYParallaxHorizontalView */ = {
 			isa = PBXGroup;
 			children = (
-				5FC828181AFF6F5600E841AC /* KYParallaxHorizontalView.h */,
-				5FC828191AFF6F5600E841AC /* KYParallaxHorizontalView.m */,
+				5FC828261B00AE6500E841AC /* KYParallaxHorizontalView.h */,
+				5FC828271B00AE6500E841AC /* KYParallaxHorizontalView.m */,
 				5FC8280C1AFF6E3E00E841AC /* KYParallaxCollection */,
 			);
 			name = KYParallaxHorizontalView;
@@ -179,10 +179,10 @@
 		5FC8280C1AFF6E3E00E841AC /* KYParallaxCollection */ = {
 			isa = PBXGroup;
 			children = (
-				5FC8281B1AFF6F5C00E841AC /* KYParallaxCollectionCell.h */,
-				5FC8281C1AFF6F5C00E841AC /* KYParallaxCollectionCell.m */,
-				5FC8281D1AFF6F5C00E841AC /* KYParallaxCollectionLayout.h */,
-				5FC8281E1AFF6F5C00E841AC /* KYParallaxCollectionLayout.m */,
+				5FC828291B00AE6E00E841AC /* KYParallaxCollectionCell.h */,
+				5FC8282A1B00AE6E00E841AC /* KYParallaxCollectionCell.m */,
+				5FC8282B1B00AE6E00E841AC /* KYParallaxCollectionLayout.h */,
+				5FC8282C1B00AE6E00E841AC /* KYParallaxCollectionLayout.m */,
 			);
 			name = KYParallaxCollection;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FBB503B1AFD1FD900EF4189 /* Main.storyboard in Resources */,
-				5FC828111AFF6F2F00E841AC /* CustomViews.xib in Resources */,
+				5FC828331B00AE7D00E841AC /* CustomViews.xib in Resources */,
 				5FBB50401AFD1FD900EF4189 /* LaunchScreen.xib in Resources */,
 				5FBB503D1AFD1FD900EF4189 /* Images.xcassets in Resources */,
 			);
@@ -288,14 +288,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FC828101AFF6F2F00E841AC /* CustomViews.m in Sources */,
+				5FC8282E1B00AE6E00E841AC /* KYParallaxCollectionLayout.m in Sources */,
+				5FC828321B00AE7D00E841AC /* CustomViews.m in Sources */,
+				5FC828281B00AE6500E841AC /* KYParallaxHorizontalView.m in Sources */,
+				5FC8282D1B00AE6E00E841AC /* KYParallaxCollectionCell.m in Sources */,
+				5FC828361B00AE8300E841AC /* KYParallaxVerticalView.m in Sources */,
 				5FBB50381AFD1FD900EF4189 /* ViewController.m in Sources */,
-				5FC828171AFF6F5000E841AC /* KYParallaxVerticalView.m in Sources */,
-				5FC8281F1AFF6F5C00E841AC /* KYParallaxCollectionCell.m in Sources */,
 				5FBB50351AFD1FD900EF4189 /* AppDelegate.m in Sources */,
 				5FBB50321AFD1FD900EF4189 /* main.m in Sources */,
-				5FC8281A1AFF6F5600E841AC /* KYParallaxHorizontalView.m in Sources */,
-				5FC828201AFF6F5C00E841AC /* KYParallaxCollectionLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

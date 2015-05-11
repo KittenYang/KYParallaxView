@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KYParallaxCollectionCell.h"
 
 @interface KYParallaxHorizontalView : UIView
 
