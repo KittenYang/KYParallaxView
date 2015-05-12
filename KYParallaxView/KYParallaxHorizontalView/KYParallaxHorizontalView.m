@@ -8,7 +8,6 @@
 
 
 #import "KYParallaxHorizontalView.h"
-#import "KYParallaxCollectionLayout.h"
 #import "KYParallaxVerticalView.h"
 
 
@@ -17,7 +16,6 @@
 @end
 
 @implementation KYParallaxHorizontalView{
-    KYParallaxCollectionLayout *layout;
     KYParallaxCollectionCell *currentCell;
     UIImageView *leftParallaxImageView;
     UIImageView *rightParallaxImageView;

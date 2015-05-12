@@ -7,10 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "KYParallaxVerticalView.h"
 #import "KYParallaxHorizontalView.h"
-#import "KYParallaxCollectionLayout.h"
-#import "KYParallaxCollectionCell.h"
+
 
 @interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
