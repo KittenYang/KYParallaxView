@@ -4,22 +4,15 @@
 </p>
 
 
-![CocoaPods Version](https://img.shields.io/badge/pod-v1.0.2-brightgreen.svg)
+![CocoaPods Version](https://img.shields.io/badge/pod-v1.0.4-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-iOS-red.svg)
 
 
 
 
-一个
+一个  **使用简单** / **高度自定义** / **两种使用方法**  的视差滚动框架 
 
-**1.使用简单** 
-
-**2.高度自定义**
-
-**3.两种使用方法** 
-
-的视差滚动框架 
 
 it's a easy-to-use / highly customize / two way to use parallax effects framework.
 
@@ -28,7 +21,7 @@ it's a easy-to-use / highly customize / two way to use parallax effects framewor
 
 ##安装 Installation
 ---
-`pod 'KYParallaxView', '~> 1.0.3'`
+`pod 'KYParallaxView', '~> 1.0.4'`
 
 ---
 
@@ -143,6 +136,9 @@ Two situations to use this framework：
 ```
 
 ##版本
+###v1.0.4
+使用官方的UICollectionViewFlowLayout,移除自定义Layout。
+
 ###v1.0.3
 解决了在一个有状态栏的页面使用本框架时UIScrollView会发生偏移的问题。
 
