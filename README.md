@@ -28,7 +28,7 @@ it's a easy-to-use / highly customize / two way to use parallax effects framewor
 
 ##安装 Installation
 ---
-`pod 'KYParallaxView', '~> 1.0.2'`
+`pod 'KYParallaxView', '~> 1.0.3'`
 
 ---
 
@@ -41,6 +41,7 @@ Two situations to use this framework：
 
 
   If you just wanna use the single vertical scroll view,you should:
+`#import "KYParallaxVerticalView.h"`
 
 ```objective-c
     KYParallaxVerticalView *parallaxVerticalView= [[KYParallaxVerticalView alloc]initWithFrame:self.view.frame];
@@ -57,6 +58,8 @@ Two situations to use this framework：
 ##2、如果你需要使用整个框架，那么你需要在你的ViewController中：
 
      If you wanna use the whole framework.
+
+`#import "KYParallaxHorizontalView.h"`
 
 ```objective-c
   KYParallaxHorizontalView *parallaxHorizontalView = [[KYParallaxHorizontalView alloc]initWithFrame:self.view.frame andCollectionDelegate:self];
@@ -138,4 +141,7 @@ Two situations to use this framework：
 
 ```
 
+##版本
+###v1.0.3
+解决了在一个有状态栏的页面使用本框架时UIScrollView会发生偏移的问题。
 
