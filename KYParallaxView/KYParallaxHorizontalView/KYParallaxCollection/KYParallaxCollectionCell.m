@@ -13,6 +13,9 @@
 
 
 -(id)initWithFrame:(CGRect)frame{
+//    if (frame.origin.y != 0.0) {
+//        frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+//    }
     self = [super initWithFrame:frame];
     if (self) {
         self.verticalView = [[KYParallaxVerticalView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
