@@ -11,7 +11,7 @@
 
 
 
-一个  **使用简单** / **高度自定义** / **两种使用方法**  的视差滚动框架 
+一个  **使用简单** / **高度自定义** / **两种使用方法**  的视差滚动框架。自定义程度之高、耦合度之低、内存占用程度在同类效果开源框架中是相当优秀的。
 
 
 it's a easy-to-use / highly customize / two way to use parallax effects framework.
