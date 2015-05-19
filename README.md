@@ -125,6 +125,8 @@ Two situations to use this framework：
 
   Also you can use IBOutlet to connect the xib and the code.
 
+
+
 ```objective-c
 @property (strong, nonatomic) IBOutlet UILabel *label;
 @property (strong, nonatomic) IBOutlet UIView *box1;
@@ -134,6 +136,8 @@ Two situations to use this framework：
 @property (strong, nonatomic) IBOutlet UIImageView *pic;
 
 ```
+
+
 
 ##版本
 ###v1.0.4
