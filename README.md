@@ -146,3 +146,5 @@ Two situations to use this framework：
 ###v1.0.3
 解决了在一个有状态栏的页面使用本框架时UIScrollView会发生偏移的问题。
 
+###v1.0.2
+第一次提交
